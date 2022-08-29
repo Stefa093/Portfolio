@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles.css">
     <title>Portfolio Estefania Salazar</title>
 </head>
@@ -11,17 +12,18 @@
     <nav class="navbar">       
     <ul class="menu" id="menu">
         <li><a class="font" href="#home">Home</a></li>
-        <li><a class="font" href="#skills1">Habilidades</a></li>
+        <li><a class="font" href="#hability">Habilidades</a></li>
         <li><a class="font" href="#about">Acerca de mí</a></li>
         <li><a class="font" href="#skills2">Mis habilidades</a></li>
         <li><a class="font" href="#portfolio">Mi portafolio</a></li>
         <li><a class="font" href="#contact">Contacto</a></li>
     </ul>    
-        <span class="icon__menu" id="iconMenu">&#9776</span>
+        <span class="icon_menu" id="iconMenu">&#9776</span>
     </nav>
-    <section class="home bg_position_images" id="home">
-        <a class="vector1" href="#home">
-            <svg width="176" height="158" viewBox="0 0 176 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <main class="main_container">
+    <section class="home" id="home">
+        <div class="home_main">
+            <svg class="vector1"width="" height="" viewBox="0 0 176 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                     <ellipse cx="97.3616" cy="6.70391" rx="3.74468" ry="3.35198" fill="#FF4F6F"/>
                     <ellipse cx="3.74468" cy="16.7598" rx="3.74468" ry="3.35198" fill="#FF4F6F"/>
@@ -145,8 +147,8 @@
                     <ellipse cx="78.6382" cy="150.839" rx="3.74468" ry="3.35198" fill="#FF4F6F"/>
                 </g>
             </svg>
-        <a class="vector2" href="#home"></a>
-            <svg width="712" height="731" viewBox="0 0 712 731" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="box_vector2">
+            <svg class="vector2" width="" height="" viewBox="0 0 712 731" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 100H396.5C570.746 100 712 241.254 712 415.5V731H0V100Z" fill="url(#paint0_linear_59_1212)"/>
                 <path d="M0 0H390C567.836 0 712 144.164 712 322V644H0V0Z" fill="url(#paint1_linear_59_1212)"/>
                 <defs>
@@ -160,18 +162,17 @@
                 </linearGradient>
                 </defs>
             </svg>
-        </a>
-    <div class="home_photo">
-        <img class="photo__mobile" src="./Logos-Imágenes/photo mobile.png" alt="photo_mobile">
-        <img class="photo__desktop" src="./Logos-Imágenes/photo web.png" alt="photo_web">
+            <div class="home_photo">
+                <img class="photo__mobile" src="./Logos-Imágenes/photo mobile.png" alt="photo_mobile">
+                <img class="photo__desktop" src="./Logos-Imágenes/photo web.png" alt="photo_web">
+            </div>
     </div>
     <div class="home_title">
-        <h2 class="title font text-center">Hola, soy Ana</h2>
-        <h1 class="title font text-center">Web Developer</h1>
+        <h2 class="text1 ff-subtitle color-pink text-center">Hola, soy Estefania</h2>
+        <h1 class="text ff-title font text-center">Web Developer</h1>
     </div>
-    <div>
-    <ul class="home_social">
-        <li>
+    <div class="home_social">
+    <div class="linkedin">
         <a href="#">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_59_904)">
@@ -184,208 +185,362 @@
                 </defs>
             </svg>
         </a>
-        </li>
-        <li>
+    </div>
+    <div class="instagram">
         <a href="#">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.0001 8.87578C10.2798 8.87578 8.8759 10.2797 8.8759 12C8.8759 13.7203 10.2798 15.1242 12.0001 15.1242C13.7204 15.1242 15.1243 13.7203 15.1243 12C15.1243 10.2797 13.7204 8.87578 12.0001 8.87578ZM21.3704 12C21.3704 10.7062 21.3822 9.42422 21.3095 8.13281C21.2368 6.63281 20.8947 5.30156 19.7978 4.20469C18.6986 3.10547 17.3697 2.76563 15.8697 2.69297C14.5759 2.62031 13.2939 2.63203 12.0025 2.63203C10.7087 2.63203 9.42668 2.62031 8.13527 2.69297C6.63527 2.76563 5.30402 3.10781 4.20714 4.20469C3.10792 5.30391 2.76808 6.63281 2.69542 8.13281C2.62277 9.42656 2.63449 10.7086 2.63449 12C2.63449 13.2914 2.62277 14.5758 2.69542 15.8672C2.76808 17.3672 3.11027 18.6984 4.20714 19.7953C5.30636 20.8945 6.63527 21.2344 8.13527 21.307C9.42902 21.3797 10.7111 21.368 12.0025 21.368C13.2962 21.368 14.5782 21.3797 15.8697 21.307C17.3697 21.2344 18.7009 20.8922 19.7978 19.7953C20.897 18.6961 21.2368 17.3672 21.3095 15.8672C21.3845 14.5758 21.3704 13.2937 21.3704 12V12ZM12.0001 16.807C9.33996 16.807 7.19308 14.6602 7.19308 12C7.19308 9.33984 9.33996 7.19297 12.0001 7.19297C14.6603 7.19297 16.8072 9.33984 16.8072 12C16.8072 14.6602 14.6603 16.807 12.0001 16.807ZM17.004 8.11875C16.3829 8.11875 15.8814 7.61719 15.8814 6.99609C15.8814 6.375 16.3829 5.87344 17.004 5.87344C17.6251 5.87344 18.1267 6.375 18.1267 6.99609C18.1269 7.14357 18.098 7.28964 18.0416 7.42593C17.9853 7.56222 17.9026 7.68606 17.7983 7.79034C17.694 7.89463 17.5702 7.97732 17.4339 8.03367C17.2976 8.09002 17.1515 8.11893 17.004 8.11875V8.11875Z" fill="#34B0BE"/>
             </svg>
         </a>
-        </li>
-        <li>
+    </div>
+    <div class="twitter">
         <a href="#">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21.7499 5.96016C21.0327 6.26953 20.2522 6.49219 19.4483 6.57891C20.283 6.08305 20.908 5.29969 21.2061 4.37578C20.4229 4.84169 19.5649 5.1684 18.6702 5.34141C18.2962 4.94162 17.844 4.62314 17.3415 4.4058C16.8391 4.18846 16.2973 4.07692 15.7499 4.07813C13.535 4.07813 11.7538 5.87344 11.7538 8.07656C11.7538 8.38594 11.7913 8.69532 11.8522 8.99297C8.53583 8.81953 5.57802 7.23516 3.61162 4.80938C3.25332 5.42137 3.06556 6.11819 3.06787 6.82735C3.06787 8.21485 3.77334 9.43828 4.84912 10.1578C4.21515 10.1328 3.59602 9.95859 3.04209 9.64922V9.69844C3.04209 11.6414 4.41553 13.2516 6.24599 13.6219C5.9023 13.7112 5.54874 13.7568 5.19365 13.7578C4.93349 13.7578 4.6874 13.732 4.43896 13.6969C4.94521 15.2813 6.41943 16.432 8.1749 16.4695C6.80146 17.5453 5.08115 18.1781 3.21318 18.1781C2.87803 18.1781 2.56865 18.1664 2.24756 18.1289C4.01943 19.2656 6.12177 19.9219 8.38583 19.9219C15.7358 19.9219 19.7577 13.8328 19.7577 8.54766C19.7577 8.37422 19.7577 8.20078 19.746 8.02735C20.5241 7.45781 21.2061 6.75235 21.7499 5.96016Z" fill="#34B0BE"/>
             </svg>
         </a>
-        </li>
-    </ul>
+    </div>        
     </div>
-    <div class="home_contactme">
-        <a href="#">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66683 6.66666H33.3335C35.1668 6.66666 36.6668 8.16666 36.6668 9.99999V30C36.6668 31.8333 35.1668 33.3333 33.3335 33.3333H6.66683C4.8335 33.3333 3.3335 31.8333 3.3335 30V9.99999C3.3335 8.16666 4.8335 6.66666 6.66683 6.66666Z" fill="#34B0BE" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M36.6668 9.99999L20.0002 21.6667L3.3335 9.99999" fill="#34B0BE"/>
-            <path d="M36.6668 9.99999L20.0002 21.6667L3.3335 9.99999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </a>
-        <a class="about_contactme font color" href="#">✉  Contáctame</a>
+    <div class="line"></div>
+    <div class="contact1">
+    <div class="about_contact home_contactme color-white">
+        <a class="about_contactme ff-subsection" href="#">✉️ Contáctame</a>
     </div>
+    </div>
+        </div>
     </section>
-    <section class="skills1 " id="skills1">
-    <div class="skills1_left">
-        <a href="#">
+    <section class="hability" id="hability">
+    <div class="skills1_title">
+        <h2 class="skills text1 ff-subtitle text-upper color-pink">habilidades</h2>
+    </div>
+<div class="skills1 swiper">
+        <div class="swiper-wrapper">
+    <div class="skills1_text1 swiper-slide">
+        <h3 class="num ff-subtitle color-blue">95%</h3>
+        <p class="text1 ff-subsection">Mobile app design</p>
+    </div>
+    <div class="skills1_text2 swiper-slide">
+        <h3 class="num ff-subtitle color-blue">95%</h3>
+        <p class="text1 ff-subsection">Web Design</p>
+    </div>
+    <div class="skills1_text3 swiper-slide">
+        <h3 class="num ff-subtitle color-blue">95%</h3>
+        <p class="text1 ff-subsection">HTML,CSS,JS</p>
+    </div>
+    <div class="skills1_text4 swiper-slide">
+        <h3 class="num ff-subtitle color-blue">60%</h3>
+        <p class="text1 ff-subsection">Design Systems</p>
+    </div>
+    </div>
+    <div class="skills1_left swiper-button-prev">
+        <!-- <a href="#">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.5 6H2.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M6 9.5L2.5 6L6 2.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        </a>
+        </a> -->
     </div>
-    <div class="skills1_right">
-        <a href="#">
+    <div class="skills1_right swiper-button-next">
+        <!-- <a href="#">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.5 6H9.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M6 2.5L9.5 6L6 9.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        </a>
+        </a> -->
     </div>
-    <div class="skills1_title">
-        <h2 class="font color">habilidades</h2>
-    </div>
-    <div class="skills1_text1">
-        <h3>95%</h3>
-        <p>Mobile app design</p>
-    </div>
-    <div class="skills1_text2">
-        <h3>95%</h3>
-        <p>Web Design</p>
-    </div>
-    <div class="skills1_text3">
-        <h3>95%</h3>
-        <p>HTML,CSS,JS</p>
-    </div>
-    <div class="skills1_text4">
-        <h3>60%</h3>
-        <p>Design Systems</p>
-    </div>  
+</div>  
     </section>
     <section class="about" id="about">
-        <h2>acerca de mí</h2>
-        <p>Desarrolladora Full Stack en formación con conocimientos en HTML, CSS, y JavaScript. Soy una persona a la que le gusta reinventarse constantemente en busca de alcanzar un mejor desempeño.</p>
-        <p>Mi perfil está orientado al logro, la productividad, la resolución de problemas y un espíritu de aprendizaje constante.</p>
-        <p>He encontrado una gran pasión por el desarrollo web y la implementación de aplcaciones que busquen suplir las necesidades sociales.</p>
-        <p>Busco oportunidades que me permitan aprender cada día a través de retos, trabajar en equipo e implemetar mis conocimientos para el bien común.</p>
-    <div class="about_logos_img">
-        <img src="./Logos-Imágenes/image 9.png" alt="UVM">
-        <img src="./Logos-Imágenes/logo_academlo 5.png" alt="academlo">
+        <svg class="vector3" width="" height="" viewBox="0 0 413 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.2">
+            <ellipse cx="8.78723" cy="7.86573" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="15.7314" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="39.3287" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="47.1946" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="70.7917" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="78.6575" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="102.254" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="110.12" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="133.717" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="141.583" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="165.18" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="173.046" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="196.643" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="204.509" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="228.106" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="235.972" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="259.569" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="267.435" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="291.031" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="298.897" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="322.495" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="330.36" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="8.78723" cy="353.958" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="228.468" cy="361.823" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="7.86573" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="15.7314" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="39.3287" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="47.1945" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="70.7917" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="78.6575" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="102.254" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="110.12" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="133.717" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="141.583" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="165.18" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="173.046" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="196.643" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="204.509" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="228.106" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="235.972" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="259.569" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="267.435" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="291.031" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="298.897" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="322.495" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="330.36" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="52.7235" cy="353.958" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="272.405" cy="361.823" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="7.86573" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="15.7314" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="39.3287" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="47.1945" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="70.7917" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="78.6575" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="102.254" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="110.12" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="133.717" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="141.583" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="165.18" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="173.046" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="196.643" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="204.509" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="228.106" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="235.972" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="259.569" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="267.435" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="291.031" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="298.897" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="322.495" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="330.36" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="96.6598" cy="353.958" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="316.34" cy="361.823" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="7.86573" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="15.7314" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="39.3287" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="47.1946" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="70.7917" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="78.6575" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="102.254" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="110.12" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="133.717" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="141.583" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="165.18" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="173.046" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="196.643" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="204.509" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="228.106" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="235.972" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="259.569" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="267.435" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="291.031" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="298.897" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="322.495" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="330.36" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="140.596" cy="353.958" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="360.276" cy="361.823" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="7.86573" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="15.7314" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="39.3287" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="47.1945" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="70.7917" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="78.6575" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="102.254" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="110.12" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="133.717" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="141.583" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="165.18" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="173.046" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="196.643" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="204.509" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="228.106" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="235.972" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="259.569" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="267.435" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="291.031" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="298.897" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="322.495" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="330.36" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="184.532" cy="353.958" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            <ellipse cx="404.213" cy="361.823" rx="8.78723" ry="7.86573" fill="#FF4F6F"/>
+            </g>
+        </svg>
+    <div class="about_text">
+        <h2 class="text1 ff-subtitle text-upper color-pink">acerca de mí</h2>
+        <p class="text1 color-gray ff-body">Desarrolladora Full Stack en formación con conocimientos en HTML, CSS, y JavaScript. Soy una persona a la que le gusta reinventarse constantemente en busca de alcanzar un mejor desempeño.</p>
+        <p class="text1 color-gray ff-body">Mi perfil está orientado al logro, la productividad, la resolución de problemas y un espíritu de aprendizaje constante.</p>
+        <p class="color-gray ff-body">He encontrado una gran pasión por el desarrollo web y la implementación de aplcaciones que busquen suplir las necesidades sociales.</p>
+        <p class="color-gray ff-body">Busco oportunidades que me permitan aprender cada día a través de retos, trabajar en equipo e implemetar mis conocimientos para el bien común.</p>
     </div>
     <div class="about_logos_dates">
-        <div class="dates1">
-            <h3>UVM</h3>
-            <P>2010-2014</P>
-        </div>
-        <div class="dates2">
-            <h3>Academlo</h3>
-            <P>2020-2021</P>
-        </div>     
+    <div class="academlo">
+        <img src="./Logos-Imágenes/logo_academlo 5.png" alt="academlo">
+    </div>    
+    <div class="dates2">
+        <h3 class="color-gray">Academlo</h3>
+        <P class="ff-body color-gray">2020-2021</P>
+    </div>  
+    <div class="UVM">
+        <img src="./Logos-Imágenes/image 9.png" alt="UVM">
+    </div>    
+    <div class="dates1">
+        <h3 class="color-gray">UVM</h3>
+        <P class="ff-body color-gray">2010-2014</P>
+    </div>
     </div>       
     </section>
     <section class="skills2" id="skills2">
         <div class="skills2_title">
-            <h2>mis habilidades</h2>
+            <h2 class="text1 ff-subtitle text-upper color-pink">mis habilidades</h2>
         </div>
+    <div class="skili">
         <div class="skills2_pencil">
-            <a href="#">
-                <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sv2" width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 8.40222C26.9875 8.40222 8.33331 27.2106 8.33331 50.4132C8.33331 73.6159 26.9875 92.4243 50 92.4243C73.0125 92.4243 91.6667 73.6159 91.6667 50.4132C91.6667 27.2106 73.0125 8.40222 50 8.40222Z" fill="white" stroke="#FF4F6F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M33.3333 88.9289V58.8154L50 29.4077L66.6666 58.8154V88.9289" fill="#FF4F6F"/>
                     <path d="M33.3333 88.9289V58.8154L50 29.4077L66.6666 58.8154V88.9289" stroke="#FF4F6F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M33.3333 58.8154C33.3333 58.8154 38.0291 63.0165 41.6666 63.0165C45.3041 63.0165 50 58.8154 50 58.8154C50 58.8154 54.6958 63.0165 58.3333 63.0165C61.9708 63.0165 66.6666 58.8154 66.6666 58.8154" fill="#FF4F6F"/>
                     <path d="M33.3333 58.8154C33.3333 58.8154 38.0291 63.0165 41.6666 63.0165C45.3041 63.0165 50 58.8154 50 58.8154C50 58.8154 54.6958 63.0165 58.3333 63.0165C61.9708 63.0165 66.6666 58.8154 66.6666 58.8154" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-            </a>
         </div>
         <div class="skills2_text1">
-            <h2>Web Design</h2>
-            <p>Desde diseño hasta implementación de desarrollo</p>
+            <h2 class="text1 text-center">Web Design</h2>
+            <p class="text-center ff-body color-gray">Desde diseño hasta implementación de desarrollo</p>
         </div>
         <div class="skills2_web">
-            <a href="#">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sv2" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M79.1667 16.6666H20.8333C18.6232 16.6666 16.5036 17.5446 14.9408 19.1074C13.378 20.6702 12.5 22.7898 12.5 25V75C12.5 77.2101 13.378 79.3297 14.9408 80.8925C16.5036 82.4553 18.6232 83.3333 20.8333 83.3333H79.1667C83.75 83.3333 87.5 79.5833 87.5 75V25C87.5 22.7898 86.622 20.6702 85.0592 19.1074C83.4964 17.5446 81.3768 16.6666 79.1667 16.6666ZM79.1667 75H20.8333V33.3333H79.1667V75Z" fill="#FFBC57"/>
                 </svg>
-            </a>
         </div>
         <div class="skills2_text2">
-            <h2>Desarrollo Web</h2>
-            <p>Desde diseño hasta implementación de desarrollo</p>
+            <h2 class="text1 text-center">Desarrollo Web</h2>
+            <p class="text-center ff-body color-gray">Desde diseño hasta implementación de desarrollo</p>
         </div>
         <div class="skills2_search">
-            <a href="#">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sv2" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M45.8333 79.1667C64.2428 79.1667 79.1667 64.2428 79.1667 45.8333C79.1667 27.4238 64.2428 12.5 45.8333 12.5C27.4238 12.5 12.5 27.4238 12.5 45.8333C12.5 64.2428 27.4238 79.1667 45.8333 79.1667Z" stroke="#7F5FD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M87.5 87.5L69.375 69.375" stroke="#7F5FD8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            </a>
         </div>
         <div class="skills2_text3">
-            <h2>Research</h2>
-            <p>Desde diseño hasta implementación de desarrollo</p>
+            <h2 class="text1 text-center">Research</h2>
+            <p class="text-center ff-body color-gray">Desde diseño hasta implementación de desarrollo</p>
         </div>
         <div class="skills2_speakerphone">
-            <a href="#">
-                <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="sv2" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M82.5367 13.6904C88.6417 10.1979 96.25 14.6071 96.25 21.6471V79.1863C96.25 86.2217 88.6463 90.6354 82.5367 87.1429L58.3642 73.3333H50.4167V89.375C50.4167 92.414 49.2095 95.3284 47.0606 97.4773C44.9118 99.6261 41.9973 100.833 38.9584 100.833C35.9194 100.833 33.005 99.6261 30.8561 97.4773C28.7073 95.3284 27.5 92.414 27.5 89.375V72.875C21.948 71.7249 17.0191 68.5583 13.6653 63.9867C10.3115 59.4151 8.77067 53.7629 9.34049 48.1217C9.9103 42.4805 12.5503 37.2506 16.7506 33.4421C20.9509 29.6335 26.4135 27.5165 32.0834 27.5H58.3642L82.5367 13.6904ZM55.0001 36.6667H32.0834C28.4367 36.6667 24.9393 38.1153 22.3607 40.694C19.782 43.2726 18.3334 46.7699 18.3334 50.4167C18.3334 54.0634 19.782 57.5608 22.3607 60.1394C24.9393 62.718 28.4367 64.1667 32.0834 64.1667H55.0001V36.6667ZM64.1667 66.0917L87.0834 79.1863V21.6471L64.1667 34.7417V66.0917ZM36.6667 73.3333V89.375C36.6667 89.9828 36.9082 90.5657 37.3379 90.9955C37.7677 91.4252 38.3506 91.6667 38.9584 91.6667C39.5662 91.6667 40.1491 91.4252 40.5788 90.9955C41.0086 90.5657 41.2501 89.9828 41.2501 89.375V73.3333H36.6667Z" fill="#34B0BE"/>
                 </svg>
-            </a>
         </div>
         <div class="skills2_text4">
-            <h2>Marketing</h2>
-            <p>Desde diseño hasta implementación de desarrollo</p>
+            <h2 class="text1 text-center">Marketing</h2>
+            <p class="text-center ff-body color-gray">Desde diseño hasta implementación de desarrollo</p>
         </div>
+    </div>
     </section>
     <section class="portfolio" id="portfolio">
-        <div class="portfolio_left">
-            <a href="#">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.5 6H2.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 9.5L2.5 6L6 2.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-        <div class="portfolio_right">
-            <a href="#">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 6H9.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 2.5L9.5 6L6 9.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-        <div class="portfolio_img1">
-            <img src="./Logos-Imágenes/image 9-1.png" alt="beauty_app">
-            <h3>Beauty app</h3>
-        </div>
-        <div class="portfolio_img2">
-            <img src="./Logos-Imágenes/image 10.png" alt="training_app">
-            <h3>Training app</h3>
-        </div>
-        <div class="portfolio_img3">
-            <img src="./Logos-Imágenes/Rectangle 58.png" alt="management_app1">
-            <h3>Management Web</h3>
-        </div>
-        <div class="portfolio_img4">
-            <img src="./Logos-Imágenes/image 11.png" alt="management_app2">
-            <h3>Management Web</h3>
+        <h2 class="text1 ff-subtitle text-upper color-pink">mi portafolio</h2>
+        <div class="port1">
+            <div class="swiper1">
+                <div class="swiper-wrapper">
+                <div class="cont_bg1 portfolio_img swiper-slide">
+                        <img clas="porim" src="./Logos-Imágenes/image 9-1.png" alt="beauty_app">
+                        <h3 class="tex">Beauty app</h3>
+                </div>
+                <div class="cont_bg2 portfolio_img swiper-slide">
+                        <img clas="porim" src="./Logos-Imágenes/image 10.png" alt="training_app">
+                        <h3 class="tex">Training app</h3>
+                </div>
+                <div class="cont_bg3 portfolio_img swiper-slide">
+                        <img clas="porim" src="./Logos-Imágenes/Rectangle 58.png" alt="management_app1">
+                        <h3 class="tex">Management Web</h3>
+                </div>
+                <div class="cont_bg4 portfolio_img swiper-slide">
+                        <img clas="porim" src="./Logos-Imágenes/image 11.png" alt="management_app2">
+                        <h3 class="tex">Management Web</h3>
+                </div>                
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
     <section class="contact" id="contact">
+        <h2 class="text1 ff-subtitle text-upper color-pink">contacto</h2>
+    <div class="con1_main">
+        <div class="con1">
         <div class="contact_phone_icon">
-            <a href="#">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="60" height="60" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.6669 28.2V33.2C36.6688 33.6642 36.5737 34.1236 36.3877 34.5489C36.2018 34.9742 35.929 35.356 35.587 35.6698C35.245 35.9836 34.8412 36.2225 34.4015 36.3712C33.9618 36.5199 33.4958 36.5751 33.0335 36.5333C27.9049 35.9761 22.9785 34.2236 18.6502 31.4167C14.6233 28.8578 11.2091 25.4436 8.65021 21.4167C5.83351 17.0687 4.08062 12.1183 3.53355 6.96666C3.4919 6.50577 3.54667 6.04126 3.69438 5.6027C3.84209 5.16414 4.0795 4.76114 4.39149 4.41936C4.70348 4.07758 5.08322 3.8045 5.50653 3.61753C5.92984 3.43055 6.38745 3.33376 6.85021 3.33332H11.8502C12.6591 3.32536 13.4432 3.61179 14.0565 4.13921C14.6698 4.66663 15.0703 5.39907 15.1835 6.19999C15.3946 7.8001 15.786 9.3712 16.3502 10.8833C16.5745 11.4799 16.623 12.1282 16.4901 12.7515C16.3571 13.3747 16.0483 13.9468 15.6002 14.4L13.4835 16.5167C15.8561 20.6892 19.311 24.1441 23.4835 26.5167L25.6002 24.4C26.0534 23.9519 26.6255 23.6431 27.2487 23.5101C27.872 23.3772 28.5203 23.4257 29.1169 23.65C30.629 24.2142 32.2001 24.6056 33.8002 24.8167C34.6098 24.9309 35.3492 25.3387 35.8778 25.9625C36.4063 26.5863 36.6872 27.3826 36.6669 28.2Z" fill="#34B0BE"/>
                 </svg>
-            </a>
         </div>
-        <div class="contact_phone">
+        <div class="contact_phone text-center">
             <h3>Número Celular</h3>
-            <p>5526895424</p>
+            <p class="text color-gray">5526895424</p>
         </div>
+        </div>
+        <div class="con1">
         <div class="contact_mail_icon">
-            <a href="#">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="60" height="60" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.66683 6.66666H33.3335C35.1668 6.66666 36.6668 8.16666 36.6668 9.99999V30C36.6668 31.8333 35.1668 33.3333 33.3335 33.3333H6.66683C4.8335 33.3333 3.3335 31.8333 3.3335 30V9.99999C3.3335 8.16666 4.8335 6.66666 6.66683 6.66666Z" fill="#34B0BE" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M36.6668 9.99999L20.0002 21.6667L3.3335 9.99999" fill="#34B0BE"/>
                     <path d="M36.6668 9.99999L20.0002 21.6667L3.3335 9.99999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
         </div>
-        <div class="contact_mail">
+        <div class="contact_mail text-center">
             <h3>Email</h3>
-            <p>ejemplo@correo.com</p>
+            <p class="text ff-body color-gray">ejemplo@correo.com</p>
         </div>
+        </div>
+    </div>
     </section>
+</main>
     <footer>
-        <p>Hecho con ❤ en Academlo</p>
+        <p class="ff-body color-blue">Hecho con ❤ en Academlo</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev', 
+
+},
+            breakpoints: {         
+        320: {       
+        slidesPerView: 3,       
+        spaceBetween: 20     
+    },       
+        680: {       
+        slidesPerView: 4,
+        spaceBetween: 5     
+    }, 
+        loop: true,
+        loopFillGroupWithBlank: true,
+        
+        }
+});
+    const swiper1 = new Swiper ('.swiper1', {
+    breakpoints: {         
+        320: {       
+        slidesPerView: 1,       
+        spaceBetween: 30     
+    },       
+        680: {       
+        slidesPerView: 4,
+        spaceBetween: 10     
+    }, 
+
+}});
+    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
